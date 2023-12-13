@@ -1,0 +1,14 @@
+.windbnb__footer{
+    width: 100%;
+    min-height: 100px ;
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.windbnb__footer a{
+    color: #fdfdfd;
+}

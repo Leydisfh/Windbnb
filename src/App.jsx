@@ -1,9 +1,10 @@
 
 import './App.css';
-
+import './Styles/Footer.css';
 import Header from './Components/Header';
 import Box from './Components/Box';
 import SearchEdit from './Components/Search-edit';
+
 
 function App() {
 
@@ -14,17 +15,16 @@ function App() {
 
   return (
     <>
-      <Header 
-      onSubmit ={handleSearch}
-      />
-
+      <Header onSubmit ={handleSearch}/>
       <SearchEdit />
-
-
     <main>
 
      <Box />
     </main>
+
+    <footer className='windbnb__footer'>
+      <a href="https://github.com/Leydisfh">Created by Leydis Fernandez - devChallenges.io</a>
+    </footer>
     </>
   )
 }
