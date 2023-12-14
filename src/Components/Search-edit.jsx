@@ -1,8 +1,11 @@
+
 import "../Styles/search-edit.css";
 import { IoClose} from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 
-const SearchEdit = ({locationValue, locationOptions}) =>{
+const SearchEdit = ({locationValue, locationOptions, value, onChangeGuest}) =>{
+   
+
     return(
         <article className="search__container">
             <header className="search__header">
@@ -17,7 +20,7 @@ const SearchEdit = ({locationValue, locationOptions}) =>{
                 <input type="text" name="location" placeholder="Add location" value={locationValue} onChange={()=>{locationValue}}/>
                 </label>
                 <label htmlFor="guets" > Guests
-                    <input type="text" placeholder="Add guets" />
+                    <input type="text" placeholder="Add guets" value={value} onChange={onChangeGuest}/>
                 </label>
             </section>
             <div className="search__location">

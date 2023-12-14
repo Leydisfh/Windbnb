@@ -11,6 +11,9 @@ import SearchEdit from './Components/Search-edit';
 function App() {
   const [location, setLocation] = useState('');
   const [isLocation, setIslocation] = useState(false);
+  const [showList , setShowList] = useState(false); // Estado de la lista
+
+  const [guestValues, setGuestValues] = useState('');
   
   //Capturando el valor del location
   const changeLocation = (e) =>{
@@ -25,6 +28,7 @@ function App() {
       if(location === item.city || location === item.country){
         return setIslocation(true)
       }
+      setShowList(true);
     })
   }
 
@@ -34,7 +38,7 @@ function App() {
   );
 
 // Creando elemento li del componente search
-  const locationList = location && (
+  const locationList = location && showList &&(
   uniqueLocations.map((item, index) => (
       <li key={index}>
         <IoLocationSharp style={{ fontSize: '20px' }} /> 
@@ -44,19 +48,27 @@ function App() {
   ))
  ) ;
 
+
+ const onChangeValue = (e) =>{
+  e.preventDefault()
+  return setGuestValues(e.target.value)
+ }
+
   return (
     <>
       <Header 
         valueLocation={location}
         onChangeLocation = {changeLocation}
         onSubmit ={handleSearch}
-      
+       
       />
      { 
       isLocation && (
       <SearchEdit  
       locationValue={location}
       locationOptions ={locationList}
+      value = {guestValues}
+      onChangeGuest = {onChangeValue}
       /> 
       )
       }   
