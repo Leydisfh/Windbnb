@@ -68,7 +68,7 @@ label input::placeholder{
     margin: 10px 0;
 }
 
-.serch__location__options{
+.search__location__options{
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -130,7 +130,7 @@ font-family: 'Mulish';
 
     }
 
-    .serch__location__options{
+    .search__location__options{
         margin-left: 35px;
         margin-bottom: 35px;
     }

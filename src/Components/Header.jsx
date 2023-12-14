@@ -2,7 +2,7 @@ import { IoIosSearch } from "react-icons/io";
 import logo from "../assets/img/logo.png";
 import "../Styles/Header.css";
 
-const Header = ({onSubmit}) => {
+const Header = ({onSubmit, onChangeLocation, valueLocation}) => {
   return (
     <header className="bnb__header">
       <img src={logo} alt="windbnb logo" />
@@ -12,7 +12,9 @@ const Header = ({onSubmit}) => {
             type="search"
             id="search"
             name="search"
+            value={valueLocation}
             placeholder="Location"
+            onChange={onChangeLocation}
             />
           <input className="search__input guest" placeholder="Add guest" /> 
           <button type="submit" >

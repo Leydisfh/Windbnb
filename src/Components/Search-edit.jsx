@@ -1,8 +1,8 @@
 import "../Styles/search-edit.css";
-import { IoClose, IoLocationSharp  } from "react-icons/io5";
+import { IoClose} from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 
-const SearchEdit = () =>{
+const SearchEdit = ({locationValue, locationOptions}) =>{
     return(
         <article className="search__container">
             <header className="search__header">
@@ -14,19 +14,16 @@ const SearchEdit = () =>{
 
             <section className="search__section">
                 <label htmlFor="location">Location
-                <input type="text" name="location" placeholder="Add location" />
+                <input type="text" name="location" placeholder="Add location" value={locationValue} onChange={()=>{locationValue}}/>
                 </label>
                 <label htmlFor="guets" > Guests
                     <input type="text" placeholder="Add guets" />
                 </label>
             </section>
             <div className="search__location">
-                <ul className="serch__location__options">
-                    <li><IoLocationSharp style={{fontSize:'20px'}}/> Helsinki, Finland</li>
-                    <li><IoLocationSharp style={{fontSize:'20px'}}/>Turku, Finland</li>
-                    <li><IoLocationSharp style={{fontSize:'20px'}}/>Oulu, Finland</li>
-                    <li><IoLocationSharp style={{fontSize:'20px'}}/>Vaasa, Finland</li>
-                </ul>
+            <ul  className="search__location__options">
+                {locationOptions}
+            </ul>
             </div>
 
             <button className="search__container-button" >
