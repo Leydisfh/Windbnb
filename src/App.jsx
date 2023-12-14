@@ -18,7 +18,7 @@ function App() {
     setLocation(e.target.value)
   }
 
-  
+  //Controlando el search buuton inicial
   const handleSearch = (e) =>{
     e.preventDefault()
     return  stays.find((item)=>{
@@ -28,12 +28,12 @@ function App() {
     })
   }
 
-  // si el valor del location existe vamos a mostrar todos los valores de ese location
+  // Funcion para controlar que lso valores no se repitan
   const uniqueLocations = Array.from(
     new Set(stays.map((item) => `${item.city}, ${item.country}`))
   );
 
-
+// Creando elemento li del componente search
   const locationList = location && (
   uniqueLocations.map((item, index) => (
       <li key={index}>
@@ -60,7 +60,6 @@ function App() {
       /> 
       )
       }   
-      
       <main>
 
      <Box />

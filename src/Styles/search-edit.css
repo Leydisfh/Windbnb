@@ -133,5 +133,10 @@ font-family: 'Mulish';
     .search__location__options{
         margin-left: 35px;
         margin-bottom: 35px;
+        
+    }
+    .search__location__options li{
+        display: flex;
+        gap: 10px;
     }
 }
