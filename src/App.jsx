@@ -13,6 +13,7 @@ function App() {
   const [isLocation, setIslocation] = useState(false);
   const [showList , setShowList] = useState(false); // Estado de la lista
 
+  const [locationOptions, setLocationOptions] = useState(location)
   const [guestValues, setGuestValues] = useState('');
   
   //Capturando el valor del location
@@ -54,6 +55,10 @@ function App() {
   return setGuestValues(e.target.value)
  }
 
+ const handleLocation =(e) =>{
+  return setLocationOptions(e.target.value);
+ }
+
   return (
     <>
       <Header 
@@ -65,8 +70,9 @@ function App() {
      { 
       isLocation && (
       <SearchEdit  
-      locationValue={location}
+      locationValue={locationOptions}
       locationOptions ={locationList}
+      onChangeLocation= {handleLocation}
       value = {guestValues}
       onChangeGuest = {onChangeValue}
       /> 
