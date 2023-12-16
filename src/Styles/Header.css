@@ -1,7 +1,7 @@
 .bnb__header{
     margin: 15px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .bnb__header__nav__container{
-    padding: 12px;
+    padding: 10px 15px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -57,6 +57,47 @@
     
 }
 
+.nav__form__active{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    background-color: #FFF;
+    padding: 5px;
+    gap: 2px ;
+}
+
+.nav__form__active form{
+    width: 85%;
+    margin:20px auto;
+}
+
+
+.search__location{
+    margin: 10px 0;
+}
+
+.search__location__options{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 10px;
+}
+
+.search__location__options li{
+display: flex;
+align-items: center;
+gap: 10px;
+color: #4F4F4F;
+font-size: 12px;
+font-weight: 400;
+font-family: 'Mulish';
+
+}
+
+
 
 @media screen and (min-width:768px) {
     .bnb__header{
@@ -73,6 +114,12 @@
         width: 40%;
         margin: 0 15px;
     }
+    .search__location__options{
+        display: flex;
+        width: 30%;
+    }
+
+  
 }
 
 @media screen and (min-width:1024px) {
@@ -85,4 +132,11 @@
     .bnb__header__nav{
         width: 23%;
     }
+
+    .search__location__options{
+        display: flex;
+        width: 25%;
+    }
+    
+   
 }
