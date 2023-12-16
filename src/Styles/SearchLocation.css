@@ -1,0 +1,38 @@
+
+.search__location{
+    margin: 10px 0;
+}
+
+.search__location__options{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 10px;
+}
+
+.search__location__options li{
+display: flex;
+align-items: center;
+gap: 10px;
+color: #4F4F4F;
+font-size: 12px;
+font-weight: 400;
+font-family: 'Mulish';
+
+}
+
+@media screen and (min-width:768px) {
+    .search__location{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        gap: 120px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .search__location__options{
+        display: flex;
+        width: 25%;
+    }
+}

@@ -4,10 +4,12 @@ import { IoIosSearch } from "react-icons/io";
 import {  IoLocationSharp  } from "react-icons/io5";
 import logo from "../assets/img/logo.png";
 import "../Styles/Header.css";
+import '../Styles/SearchLocation.css'
 
 const Header = ({onSubmit, onChangeLocation, valueLocation}) => {
  // Estado del Formulario
-const [isformActive, setIsFormActive] = useState(false)
+const [isformActive, setIsFormActive] = useState(false);
+const [isAddGuestActive, setIsAddGuestActive] = useState(false);
  
   // Manejando el formulario
  const handleForm = () =>{
@@ -54,6 +56,27 @@ const [isformActive, setIsFormActive] = useState(false)
             <ul  className="search__location__options">
                 {locationList}
             </ul>
+
+            <section className="search__location__guest-edit">
+            <div className="seacrh__location__guest-options">
+              <h4>Adults</h4>
+              <p>Ages 13 or above</p>
+              <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+                </div>
+            </div>
+            <div className="seacrh__location__guest-options">
+              <h4>Children</h4>
+              <p>Age 2-12</p>
+              <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+                </div>
+            </div>
+            </section>
             </div>
       </nav>
     </header>
