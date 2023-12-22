@@ -88,6 +88,6 @@ $ npm start
 
 ## Contact
 
-- Linkedin [leydis/fernandez](linkedin.com/in/leydis-fernández})
-- GitHub [@Leydisfh](https://{github.com/Leydisfh})
+- Linkedin [leydis/fernandez](https://linkedin.com/in/leydis-fernández})
+- GitHub [@Leydisfh](https://github.com/Leydisfh)
 
