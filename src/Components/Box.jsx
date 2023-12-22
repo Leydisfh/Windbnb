@@ -1,9 +1,8 @@
 import "../Styles/Box.css";
 import { IoIosStar } from "react-icons/io";
-import stays from "../../stays.json";
 
-const Box = () => {
-  const box = stays.map((stay, index) => {
+const Box = ({stays}) => {
+  const boxes = stays.map((stay, index) => {
     return (
       <article key={index} className="box__container">
         <img src={stay.photo} alt={stay.title} />
@@ -25,7 +24,7 @@ const Box = () => {
 
   return (
     <div className="container__box__section">
-    { box }
+    { boxes }
     </div>
     );
 };
