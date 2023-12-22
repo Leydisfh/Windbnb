@@ -5,7 +5,7 @@ const Box = ({stays}) => {
   const boxes = stays.map((stay, index) => {
     return (
       <article key={index} className="box__container">
-        <img src={stay.photo} alt={stay.title} />
+        <div className="box__container-img" style={{ backgroundImage:`url(${stay.photo})`}}></div>
         <section className="box__section">
           <div className="box__section_container">
             {stay.superHost && <button>SUPER HOST</button>}
